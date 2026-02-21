@@ -17,4 +17,4 @@ jobs:
           docker run --rm \
             -v ${{ github.workspace }}:/home/user/hostcwd \
             kivy/buildozer \
-            buildozer android debug --allow-root
+            android debug --allow-root
