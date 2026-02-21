@@ -15,12 +15,15 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.10
+          python-version: "3.10"
 
-      - name: Install Buildozer
+      - name: Install system dependencies
         run: |
           sudo apt update
           sudo apt install -y python3-pip build-essential git zip unzip openjdk-17-jdk
+
+      - name: Install Buildozer
+        run: |
           pip install buildozer cython
 
       - name: Build APK
