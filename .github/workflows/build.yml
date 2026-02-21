@@ -16,6 +16,5 @@ jobs:
         run: |
           docker run --rm \
             -v ${{ github.workspace }}:/home/user/hostcwd \
-            -e ANDROID_SDK_ROOT=/home/user/.buildozer/android/platform/android-sdk \
             kivy/buildozer \
-            bash -c "yes | sdkmanager --licenses && buildozer android debug --allow-root"
+            buildozer android debug --allow-root
